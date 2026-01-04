@@ -1,0 +1,5 @@
+streamlit
+supabase
+google-genai
+sentence-transformers
+numpy
