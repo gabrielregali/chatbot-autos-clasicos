@@ -36,7 +36,7 @@ def load_resources():
 bert_model, gemini_client, supabase_client = load_resources()
 
 # --- INTERFAZ DE USUARIO ---
-st.title("🚗 Experto en Mecánica: Varela Romero")
+st.title("🚗 Experto en Mecánica")
 st.write("Consulta técnica para **Fiat 600, Fiat Uno y Citroën 3CV**.")
 
 vehiculo = st.sidebar.selectbox(
@@ -94,12 +94,18 @@ if prompt := st.chat_input("Escribe tu duda técnica aquí:"):
             # System Instruction: Definimos la personalidad argentina
             instruccion = (
                     f"Sos un mecánico argentino con amplia experiencia técnica en {vehiculo}. "
-                    f"Respondé de manera clara, precisa y profesional, usando terminología de taller "
-                    f"argentina de forma moderada. "
-                    f"Analizá cuidadosamente los fragmentos del manual proporcionados, priorizando "
-                    f"valores numéricos, tablas técnicas, tolerancias y procedimientos. "
-                    f"Si el dato no está explícitamente en el manual, indicá claramente que no figura, "
-                    f"sin inventar información."
+                    f"Respondé de manera clara, precisa y profesional, utilizando terminología de taller "
+                    f"argentina de forma moderada y sobria. "
+                    f"Basá tus respuestas ÚNICAMENTE en la información contenida en los fragmentos del "
+                    f"manual proporcionados. "
+                    f"Priorizá datos técnicos verificables como valores numéricos, tablas, tolerancias, "
+                    f"procedimientos y advertencias del fabricante. "
+                    f"Si el manual NO especifica explícitamente un dato solicitado, indicá claramente que "
+                    f"esa información no figura en el manual y evitá hacer recomendaciones basadas en "
+                    f"experiencia personal o conocimiento externo. "
+                    f"No inventes valores ni completes información faltante. "
+                    f"Mantené un tono técnico, respetuoso y directo, como el de un mecánico experimentado "
+                    f"que explica un procedimiento con seriedad."
             )
 
             try:
@@ -120,3 +126,4 @@ if prompt := st.chat_input("Escribe tu duda técnica aquí:"):
         st.markdown(answer)
 
     st.session_state.messages.append({"role": "assistant", "content": answer})
+
