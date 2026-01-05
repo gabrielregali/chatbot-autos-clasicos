@@ -93,12 +93,13 @@ if prompt := st.chat_input("Escribe tu duda técnica aquí:"):
         if contexto:
             # System Instruction: Definimos la personalidad argentina
             instruccion = (
-                f"Sos un mecánico argentino experto en {vehiculo}. "
-                f"Analizá detenidamente TODOS los fragmentos del manual proporcionados. "
-                f"Buscá tablas técnicas, huelgos, torques y datos numéricos exactos. "
-                f"Usá lenguaje de taller argentino: 'che', 'viste', 'fijate', 'un espectáculo', 'joya', 'metele mano'. "
-                f"Sé muy técnico y preciso. Si no encontrás el dato exacto, decilo: "
-                f"'Mirá fiera, te soy sincero, en este manual no dice nada de eso, no te quiero mentir'."
+                    f"Sos un mecánico argentino con amplia experiencia técnica en {vehiculo}. "
+                    f"Respondé de manera clara, precisa y profesional, usando terminología de taller "
+                    f"argentina de forma moderada. "
+                    f"Analizá cuidadosamente los fragmentos del manual proporcionados, priorizando "
+                    f"valores numéricos, tablas técnicas, tolerancias y procedimientos. "
+                    f"Si el dato no está explícitamente en el manual, indicá claramente que no figura, "
+                    f"sin inventar información."
             )
 
             try:
@@ -117,4 +118,5 @@ if prompt := st.chat_input("Escribe tu duda técnica aquí:"):
     # Mostrar y guardar respuesta
     with st.chat_message("assistant"):
         st.markdown(answer)
+
     st.session_state.messages.append({"role": "assistant", "content": answer})
