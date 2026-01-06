@@ -52,7 +52,7 @@ vehiculo = st.sidebar.selectbox(
     "Seleccioná el modelo del vehículo:",
     ("fiat_600", "fiat_uno", "citroen_3cv"),
     format_func=lambda x: {
-        "fiat_600": "Fiat 600 (La Bolita)",
+        "fiat_600": "Fiat 600",
         "fiat_uno": "Fiat Uno",
         "citroen_3cv": "Citroën 3CV"
     }.get(x)
@@ -136,6 +136,7 @@ if prompt := st.chat_input("Escribí tu consulta técnica aquí:"):
     st.session_state.messages.append(
         {"role": "assistant", "content": answer}
     )
+
 
 
 
