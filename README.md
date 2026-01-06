@@ -39,16 +39,16 @@ El sistema responde exclusivamente con información contenida en los manuales, i
 
 2. **Instalar dependencias:**
    ```bash
-  pip install -r requirements.txt
+   pip install -r requirements.txt
 
 4. **Configurar secretos en .streamlit/secrets.toml:**
-    ```bash
+   ```bash
    GEMINI_API_KEY = "tu_api_key"
    SUPABASE_URL = "tu_url"
    SUPABASE_KEY = "tu_key"
 
 6. **Ejecutar:**
-    ```bash
+   ```bash
    streamlit run app.py
    
 ---
