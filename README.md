@@ -1,60 +1,55 @@
-# 🛠️ Asistente Técnico de Mantenimiento (RAG)
+# 🛠️ **Asistente Técnico de Mantenimiento (RAG)**
 
-Asistente basado en **Retrieval-Augmented Generation (RAG)** para realizar consultas técnicas sobre **manuales originales de vehículos**, utilizando búsqueda semántica y modelos de lenguaje de gran escala.
+Asistente basado en **Retrieval-Augmented Generation (RAG)** para consultas técnicas sobre manuales originales de vehículos clásicos, utilizando búsqueda semántica y modelos de lenguaje de gran escala.
 
-El sistema responde **exclusivamente con información contenida en los manuales técnicos**, e indica explícitamente cuando un dato no se encuentra documentado, evitando inferencias externas o alucinaciones.
-
----
-
-## 🌟 Características Principales
-
-- **RAG estricto**: las respuestas se generan únicamente a partir del contenido de los manuales.
-- **Sin alucinaciones**: si un dato no figura explícitamente, el asistente lo informa.
-- **Búsqueda semántica**: recuperación de información por significado, no solo por palabras clave.
-- **Multilenguaje**: combina manuales en español e inglés.
-- **Escalable**: la misma arquitectura puede aplicarse a manuales de maquinaria industrial.
+El sistema responde exclusivamente con información contenida en los manuales, indicando explícitamente cuando un dato no se encuentra documentado.
 
 ---
 
-## 📚 Manuales incluidos
-
-- **Fiat 600** – Manual de Taller  
-- **Fiat Uno** – Manual Haynes (inglés)  
-- **Citroën 3CV** – Manual del fabricante (español)
-
----
-
-## 🛠️ Stack Tecnológico
-
-- **Lenguaje:** Python 3.x  
-- **Modelo de Lenguaje (LLM):** Google Gemini 2.5 Flash  
-- **Modelo de Embeddings:** all-mpnet-base-v2 (Sentence Transformers)  
-- **Base de Datos Vectorial:** Supabase (PostgreSQL + pgvector)  
-- **Interfaz de Usuario:** Streamlit  
+## 🌟 **Características Principales**
+* **RAG estricto:** Respuestas basadas únicamente en manuales técnicos originales.
+* **Sin alucinaciones:** Si el dato no figura en el manual, el asistente lo informa.
+* **Búsqueda semántica:** Recuperación por significado, no por palabras clave.
+* **Multilenguaje:** Combina manuales en español e inglés.
+* **Escalable:** La arquitectura permite incorporar nuevos equipos o maquinaria industrial.
 
 ---
 
-## 🚀 Instalación
+## 📚 **Manuales Incluidos (actualmente)**
+* **Fiat 600** – Manual de Taller
+* **Fiat Uno** – Manual Haynes (EN)
+* **Citroën 3CV** – Manual del Fabricante (ES)
 
-### 1️⃣ Clonar el repositorio
+---
 
-```bash
-git clone https://github.com/tu-usuario/tu-repo.git
-cd tu-repo
+## 🛠️ **Stack Tecnológico**
+* **Lenguaje:** Python 3.x
+* **LLM:** Google Gemini 2.5 Flash
+* **Embeddings:** `all-mpnet-base-v2` (Sentence Transformers)
+* **Base Vectorial:** Supabase (PostgreSQL + pgvector)
+* **Frontend:** Streamlit
 
-### 2️⃣ Instalar dependencias
+---
 
-pip install -r requirements.txt
+## 🚀 **Instalación Rápida**
 
-### 3️⃣ Configurar secretos
+1. **Clonar el repositorio:**
+   ```bash
+   git clone [https://github.com/tu-repo.git](https://github.com/tu-repo.git)
 
-GEMINI_API_KEY = "tu_api_key"
-SUPABASE_URL = "tu_supabase_url"
-SUPABASE_KEY = "tu_supabase_anon_key"
+2. **Instalar dependencias:**
+  pip install -r requirements.txt
 
-### 4️⃣ Ejecutar la aplicación
+3. **Configurar secretos en .streamlit/secrets.toml:**
+   GEMINI_API_KEY = "tu_api_key"
+  SUPABASE_URL = "tu_url"
+  SUPABASE_KEY = "tu_key"
 
-streamlit run app.py
+4. **Ejecutar:**
+   streamlit run app.py
+   
+---
+
 
 ## 🧠 Funcionamiento General
 
@@ -66,7 +61,8 @@ streamlit run app.py
 
 ---
 
-## 🏭 Aplicación en Mantenimiento Industrial
+
+## 🏭 **Aplicación en Mantenimiento Industrial**
 
 Este proyecto funciona como una **Prueba de Concepto (PoC)** para Ingeniería de Mantenimiento y Confiabilidad.
 
@@ -78,7 +74,6 @@ La misma arquitectura puede utilizarse para:
 - Asistencia conversacional para mantenimiento preventivo y correctivo.
 - Soporte a procedimientos de seguridad y documentación técnica.
 
----
 
 ## ⚠️ Limitaciones
 
@@ -87,17 +82,16 @@ La misma arquitectura puede utilizarse para:
 
 ---
 
-## 🔗 Demo en vivo
 
-👉 **[https://chatbot-autos-clasicos-nvynbkrzdqtlxqzr9ornpo.streamlit.app/]**
 
----
+🔗 **App en vivo:** 
+👉 [https://chatbot-autos-clasicos-nvynbkrzdqtlxqzr9ornpo.streamlit.app/]
+
 
 ## 👤 Autor
 
 **Gabriel Alfredo Regali**  
-Confiabilidad Mantenimiento · IA aplicada
-
+Ingeniería de Confiabilidad · Mantenimiento · IA aplicada
 
 
 
