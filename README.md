@@ -38,14 +38,17 @@ El sistema responde exclusivamente con información contenida en los manuales, i
    git clone [https://github.com/tu-repo.git](https://github.com/tu-repo.git)
 
 2. **Instalar dependencias:**
+   ```bash
   pip install -r requirements.txt
 
-3. **Configurar secretos en .streamlit/secrets.toml:**
+4. **Configurar secretos en .streamlit/secrets.toml:**
+    ```bash
    GEMINI_API_KEY = "tu_api_key"
-  SUPABASE_URL = "tu_url"
-  SUPABASE_KEY = "tu_key"
+   SUPABASE_URL = "tu_url"
+   SUPABASE_KEY = "tu_key"
 
-4. **Ejecutar:**
+6. **Ejecutar:**
+    ```bash
    streamlit run app.py
    
 ---
@@ -91,7 +94,7 @@ La misma arquitectura puede utilizarse para:
 ## 👤 Autor
 
 **Gabriel Alfredo Regali**  
-Ingeniería de Confiabilidad · Mantenimiento · IA aplicada
+Confiabilidad Mantenimiento · IA aplicada
 
 
 
