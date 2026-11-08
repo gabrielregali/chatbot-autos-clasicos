@@ -2,6 +2,7 @@
 import streamlit as st
 import re
 from google import genai
+from google.genai import types   # se agrega por cambios en la version del API
 from sentence_transformers import SentenceTransformer
 from supabase import create_client
 
@@ -25,7 +26,12 @@ except KeyError as e:
 @st.cache_resource
 def load_resources():
     bert = SentenceTransformer("all-mpnet-base-v2")
-    client_gemini = genai.Client(api_key=GEMINI_API_KEY)
+    #client_gemini = genai.Client(api_key=GEMINI_API_KEY)
+    # se agrega por cambios en la version del API
+    client_gemini = genai.Client(
+        api_key=GEMINI_API_KEY,
+        http_options=types.HttpOptions(api_version="v1beta")
+    )
     supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
     return bert, client_gemini, supabase
 
